@@ -1,8 +1,9 @@
 using PaperReviewAPI.Models;
 
-namespace PaperReviewAPI.Data;
-
-public static class WorkflowStore
+namespace PaperReviewAPI.Data
 {
-    public static Dictionary<string, Workflow> Workflows { get; set; } = new();
+    public static class WorkflowStore
+    {
+        public static Dictionary<string, Workflow> Workflows { get; } = new();
+    }
 }

@@ -1,9 +1,10 @@
 using PaperReviewAPI.Models;
 
-namespace PaperReviewAPI.Data;
-
-public static class InstanceStore
+namespace PaperReviewAPI.Data
 {
-    public static List<PaperInstance> Instances { get; set; } = new();
-    public static int NextId = 1;
+    public static class InstanceStore
+    {
+        public static List<PaperInstance> Instances { get; } = new();
+        public static int NextId { get; set; } = 1;
+    }
 }

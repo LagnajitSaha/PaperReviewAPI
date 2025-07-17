@@ -9,7 +9,7 @@ namespace PaperReviewAPI.Controllers;
 public class InstancesController : ControllerBase
 {
     [HttpPost]
-    public IActionResult StartInstance([FromBody] PaperInstance req)
+    public IActionResult StartInstance([FromBody] StartInstanceRequest req)
     {
         if (!WorkflowStore.Workflows.TryGetValue(req.WorkflowName, out var workflow))
             return NotFound("Workflow not found");
